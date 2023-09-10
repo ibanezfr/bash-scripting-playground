@@ -8,24 +8,22 @@ dir_destino="/tmp/freedos_mount/SRC/AsmCode"
 archivos_nuevos=0
 archivos_modificados=0
 
-# Verificar si hay archivos .ASM en la carpeta de destino
-if ls "$dir_destino"/*.ASM 1> /dev/null 2>&1; then
-    # Iterar sobre los archivos .ASM en la carpeta de destino
-    for archivo_destino in "$dir_destino"/*.ASM; do
-        archivo_nombre=$(basename "$archivo_destino")
-        archivo_origen="$dir_origen/$archivo_nombre"
+# Usar find y grep para encontrar archivos .ASM y .asm (ignorar mayúsculas y minúsculas)
+archivos_a_copiar=$(find "$dir_origen" -type f | grep -iE '\.asm$')
 
-        # Comprobar si el archivo de origen existe y si es diferente del archivo de destino
-        if [ -e "$archivo_origen" ] && [ "$archivo_destino" -nt "$archivo_origen" ]; then
-            archivos_modificados=$((archivos_modificados + 1))
-            cp "$archivo_origen" "$archivo_destino"
-        fi
-    done
-else
-    # Si no existen archivos .ASM en la carpeta de destino, copiar todos los archivos .ASM desde la carpeta de origen
-    cp "$dir_origen"/*.ASM "$dir_destino"
-    archivos_nuevos=$(ls -1 "$dir_origen"/*.ASM | wc -l)
-fi
+# Iterar sobre los archivos encontrados y copiarlos
+for archivo_origen in $archivos_a_copiar; do
+    archivo_nombre=$(basename "$archivo_origen")
+    archivo_destino="$dir_destino/$archivo_nombre"
+
+    if [ -e "$archivo_destino" ] && [ "$archivo_origen" -nt "$archivo_destino" ]; then
+        archivos_modificados=$((archivos_modificados + 1))
+        cp "$archivo_origen" "$archivo_destino"
+    elif [ ! -e "$archivo_destino" ]; then
+        archivos_nuevos=$((archivos_nuevos + 1))
+        cp "$archivo_origen" "$archivo_destino"
+    fi
+done
 
 # Mostrar el informe
 echo "Informe:"

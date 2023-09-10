@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Directorios de origen y destino
-dir_origen="/tmp/freedos_mount/SRC/AsmCode"
+dir_origen="/tmp/freedos_mount/SRC/ASMCODE"
 dir_destino="/home/franco/programacion/ASM_scripts/SRC"
 
 # Inicializar contadores
