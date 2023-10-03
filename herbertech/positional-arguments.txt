@@ -1,0 +1,8 @@
+Positional Arguments
+
+Arguments are a specific positions
+Commands can take in arguments at a specific position, counting from one
+(0 reserved for the shell).
+
+$ echo Hello There!
+   0     1     2
