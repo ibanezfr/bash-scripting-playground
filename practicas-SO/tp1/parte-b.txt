@@ -1,47 +1,141 @@
 Sobre su máquina virtual o real que instalo desarrolle lo siguiente,
 
-  1- En su home ( Perfil de Usuario ) crear un directorio llamado prácticas.
+☑ 1- En su home ( Perfil de Usuario ) crear un directorio llamado practicas.
 
-  2- Dentro de prácticas crear un directorio tp1
+  mkdir user123
 
-  3- Dentro de tp1 crear el archivo perfil.txt
+☑ 2- Dentro de prácticas crear un directorio tp1
 
-  4- Usando comandos del Shell, crear un usuario nombre “admi”, para luego
+  mkdir user123/tp1
+
+☑ 3- Dentro de tp1 crear el archivo perfil.txt
+
+  touch user123/tp1/perfil.txt
+
+☑ 4- Usando comandos del Shell, crear un usuario nombre “admi”, para luego
   darle accesos privilegiados.
 
-  5- En tp1 realizar una copia de los archivos /etc/passwd y /etc/group y
+    1° Creo el usuario admi:
+
+      sudo useradd admi
+
+    2° Establezco una contraseña para el usuario:
+
+      sudo passwd admi
+
+    3° Concedo acceso privilegiado (permisos de superusuario) :
+
+      sudo usermod -aG sudo admi
+
+    4° Debo crear el directorio personal del usuario "admi":
+
+      mkdir /home/admi
+
+    5° Cambio la propiedad del directorio al usuario "admi":
+
+      chown admi:admi /home/admi
+
+    6° Establezco el shell del usuario admi para que utilice bash:
+
+      chsh -s /bin/bash admi
+
+    7° Verifico que se halla cambiado correctamente:
+
+      cat /etc/passwd | grep admi
+
+    8° Inicio sesión como "admi" y verifico el acceso:
+
+      sudo ls /root
+
+
+    Bonus: Para borrarlo junto a su home directory:
+
+      sudo userdel -r admi
+
+☑ 5- En tp1 realizar una copia de los archivos /etc/passwd y /etc/group y
 guardarlos como usuarios y grupos
 
-  6- En el archivo usuarios creado en el punto anterior, identificar el uid
+  Estando dentro de la carpeta tp1/ :
+
+    cp /etc/passwd usuarios
+
+    cp /etc/group grupos
+
+☑ 6- En el archivo usuarios creado en el punto anterior, identificar el uid
 ( Identificador de usuario), gid (Ientificador de grupo), y shell
 (Interpetre de comandos) y guardarlos en el archivo perfil.txt creado en
 el punto 3
 
-  7- Cambiar la fecha de acceso de perfil.txt a 2018-03-06
+    1° Verifico que el siguiente comando encuentra la línea que buscamos,
+    estando ubicados dentro de tp1/ :
 
-  8- Muestra las primeras 2 líneas del archivo usuarios
+      cat usuarios | grep admi
 
-  9- Muestre las últimas 4 líneas del archivo grupos.
+    Imaginemos que imprimió esto:
 
-  10- Mostrar el contenido del archivo /etc/fstab y redireccionar su contenido
+      admi:x:1010:1010:Usuario Administrador:/home/admi:/bin/bash
+
+       • "admi" es el nombre de usuario.
+       • "x" generalmente se utiliza para el campo de contraseña
+          (la contraseña cifrada se almacena en otro archivo,
+          no en /etc/passwd).
+       • El primer "1010" es el identificador de usuario (UID - User ID).
+       • El segundo "1010" es el identificador de grupo (GID - Group ID).
+       • "Usuario Administrador" es el comentario o descripción del usuario.
+       • "/home/admi" es el directorio de inicio del usuario.
+       • "/bin/bash" es el shell predeterminado para el usuario.
+
+    2° Si en el paso 1° encontramos lo que buscábamos, podemos escribir el
+    siguiente comando que inserta dicha línea en el archivo perfil.txt,
+    estando dentro de la carpeta tp1/ :
+
+      cat usuarios | grep admi >> perfil.txt
+
+☑ 7- Cambiar la fecha de acceso de perfil.txt a 2018-03-06
+
+    touch -a -t 201803060000 perfil.txt
+
+      Este comando cambiará la fecha de acceso del archivo perfil.txt al
+      6 de marzo de 2018. La opción -t se utiliza para especificar la fecha
+      y hora en el formato YYYYMMDDhhmm.ss
+
+        • YYYY es el año
+        • MM es el mes
+        • DD es el día
+        • hh es la hora
+        • mm es el minuto
+
+      Para verificarlo puedo usar el comando:
+
+        stat perfil.txt
+
+☑ 8- Muestra las primeras 2 líneas del archivo usuarios.
+
+    head -n 2 usuarios
+
+☑ 9- Muestre las últimas 4 líneas del archivo grupos.
+
+    tail -n 4 grupos
+
+☐ 10- Mostrar el contenido del archivo /etc/fstab y redireccionar su contenido
 al archivo filesystem.txt
 
-  11- Indicar cantidad de líneas, caracteres y palabras que contiene el archivo
+☐ 11- Indicar cantidad de líneas, caracteres y palabras que contiene el archivo
 filesystems.txt, redireccionar las salidas al archivo cantidad
 
-  12- Redireccionar history a $HOME/practicas/tp1/cmd.txt
+☐ 12- Redireccionar history a $HOME/practicas/tp1/cmd.txt
 
-  13- Renombrar el archivo cmd.txt como hist.txt
+☐ 13- Renombrar el archivo cmd.txt como hist.txt
 
-  14- Usando el comando grep buscar en el archivo usuarios el registro
+☐ 14- Usando el comando grep buscar en el archivo usuarios el registro
 correspondiente al usuario creado anteriormente y mandar al archivo newusuario.
 
-  15- Copiar el directorio tp1 como tp1-temp
+☐ 15- Copiar el directorio tp1 como tp1-temp
 
-  16- Copiar el documento desarrollado en la PARTE A dentro de la carpeta
+☐ 16- Copiar el documento desarrollado en la PARTE A dentro de la carpeta
 practicas/tp1, con el nombre Practica1ParteA.txt
 
-  17- Comprimir y empaquetar el directorio tp1 y dejar dicho archivo en el
+☐ 17- Comprimir y empaquetar el directorio tp1 y dejar dicho archivo en el
 directorio practicas
 
-  18- Borrar el directorio tp1-temp
+☐ 18- Borrar el directorio tp1-temp
