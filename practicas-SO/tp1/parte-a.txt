@@ -35,6 +35,9 @@ utilizados para tal fin.
   ejecutar tareas y comandos directamente escribiendo texto en lugar de
   utilizar una interfaz gráfica de usuario (GUI).
 
+  En la mayoría de distribuciones Linux, Bash es el Shell por defecto que
+  está disponible por defecto.
+
 7- Realizar una breve descripción del directorio raíz (/) (Sistema de Archivo)
 , indicando que se aloja en cada directorio del Sistema (solamente los
 directorios del raíz).
@@ -96,8 +99,23 @@ directorios del raíz).
 8- Usando el comando listar, mostrar tres formas diferente de ver el contenido
 de un directorio.
 
+  ls
+    Lista el contenido de una carpeta de forma clásica.
+
+  ls -l
+    Lista el contenido de una carpeta con detalles.
+
+  ls -R
+    Lista el contenido de una carpeta de forma recursiva.
+
 9- Indicar como hace para ver la ayuda/documentación de cada comando del shell
 del Sistema Operativo.
+
+  En Linux está disponible el comando man. Por ejemplo, "man ls" nos mostrará
+  información relacionada el comando listar.
+  Es un comando útil para acceder a la documentación de los comandos. Sirve
+  para aprender más sobre como funcionan los comandos y sus diferentes
+  comandos.
 
 10- En el Sistema Operativo Windows 10/8/7/vista/XP, en que directorio se
 guardan por defecto los perfiles de usuario.
@@ -156,3 +174,23 @@ posea).
         modernas de Windows, dicha función se trasladó a la carpeta "Users".
 
 13- Investigar sobre el protocolo e implementación de SSH.
+
+    El protocolo SSH (secure shell, intérprete de comandos seguro) sirve para
+  conectarse y autenticarse con servicios y servidores remotos. Por ejemlpo
+  con una clave SSH puedo contectarme a GitHub sin necesidad de proporcionar
+  el nombre de usuario y el personal access token en cada visita.
+    Al conectarse a través de SSH, se realiza la autenticación mediante un
+  archivo de clave privada en el equipo local.
+    SSH es el nombre de un protocolo y del programa que lo implementa cuya
+  principal función es el acceso remoto a un servidor por medio de un canal
+  seguro en el que toda la información está cifrada. Facilita las
+  comunicaciones seguras entre dos sistemas usando una arquitectura
+  cliente/servidor y que permite a los usuarios contectarse a un host
+  remotamente. SHH encripta la sesión de conexión, haciendo imposible que
+  alguien pueda obtener contraseñas no encriptadas.
+    Para su funcionamiento necesita tres puntos indispensables: usuario,
+    puerto y servidor. El cliente SHH va a contactar con el servidor para
+    iniciar la conexión. Ese servidor está escuchando a través del puerto 22 o
+    el que se le haya asignado. Posteriormente el servidor va a enviar la
+    clave pública y comienzan a organizar los parámetros y a abrir un canal
+    seguro. El cliente inicia sesión para conectarse a ese servidor.
