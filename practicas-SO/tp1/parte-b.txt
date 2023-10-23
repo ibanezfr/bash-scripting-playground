@@ -15,9 +15,14 @@ Sobre su máquina virtual o real que instalo desarrolle lo siguiente,
 ☑ 4- Usando comandos del Shell, crear un usuario nombre “admi”, para luego
   darle accesos privilegiados.
 
+  (El comando adduser setea bash por default, y va pregutando interactivamente
+  los datos del nuevo usuario)
+
     1° Creo el usuario admi:
 
-      sudo useradd admi
+      sudo useradd -m admi    (El flag -m se encarga de crear la carpeta
+                              personal del usuario y además lo configura
+                              como dueño de la misma)
 
     2° Establezco una contraseña para el usuario:
 
@@ -27,23 +32,15 @@ Sobre su máquina virtual o real que instalo desarrolle lo siguiente,
 
       sudo usermod -aG sudo admi
 
-    4° Debo crear el directorio personal del usuario "admi":
-
-      mkdir /home/admi
-
-    5° Cambio la propiedad del directorio al usuario "admi":
-
-      chown admi:admi /home/admi
-
-    6° Establezco el shell del usuario admi para que utilice bash:
+    4° Establezco el shell del usuario admi para que utilice bash:
 
       chsh -s /bin/bash admi
 
-    7° Verifico que se halla cambiado correctamente:
+    5° Verifico que se halla cambiado correctamente:
 
       cat /etc/passwd | grep admi
 
-    8° Inicio sesión como "admi" y verifico el acceso:
+    6° Inicio sesión como "admi" y verifico el acceso:
 
       sudo ls /root
 
@@ -117,25 +114,78 @@ el punto 3
 
     tail -n 4 grupos
 
-☐ 10- Mostrar el contenido del archivo /etc/fstab y redireccionar su contenido
+☑ 10- Mostrar el contenido del archivo /etc/fstab y redireccionar su contenido
 al archivo filesystem.txt
 
-☐ 11- Indicar cantidad de líneas, caracteres y palabras que contiene el archivo
+    Mostrar el contenido:
+
+      cat /etc/fstab
+
+    Redireccionarlo al archivo filesystem.txt :
+
+      cat /etc/fstab > filesystem.txt
+
+
+
+☑ 11- Indicar cantidad de líneas, caracteres y palabras que contiene el archivo
 filesystems.txt, redireccionar las salidas al archivo cantidad
 
-☐ 12- Redireccionar history a $HOME/practicas/tp1/cmd.txt
+    El comando wc recibe como argumento el nombre de un archivo he imprime
+    la cantidad de líneas, las palabras y los bytes (caracteres).
 
-☐ 13- Renombrar el archivo cmd.txt como hist.txt
+    wc filesystems.txt > cantidad
 
-☐ 14- Usando el comando grep buscar en el archivo usuarios el registro
+☑ 12- Redireccionar history a $HOME/practicas/tp1/cmd.txt
+
+    Estando dentro de la carpeta tp1/ :
+
+      history > cmd.txt
+
+☑ 13- Renombrar el archivo cmd.txt como hist.txt
+
+      mv cmd.txt hist.txt
+
+☑ 14- Usando el comando grep buscar en el archivo usuarios el registro
 correspondiente al usuario creado anteriormente y mandar al archivo newusuario.
 
-☐ 15- Copiar el directorio tp1 como tp1-temp
+      cat usuarios | grep admi < newusuario
 
-☐ 16- Copiar el documento desarrollado en la PARTE A dentro de la carpeta
+☑ 15- Copiar el directorio tp1 como tp1-temp
+
+    cp tp1 tp1-temp
+
+☑ 16- Copiar el documento desarrollado en la PARTE A dentro de la carpeta
 practicas/tp1, con el nombre Practica1ParteA.txt
 
-☐ 17- Comprimir y empaquetar el directorio tp1 y dejar dicho archivo en el
+    Estando en la carpeta raiz:
+
+      cp practicas/tp1/parte-a.txt practicas/tp1/Practica1PartaA.txt
+
+☑ 17- Comprimir y empaquetar el directorio tp1 y dejar dicho archivo en el
 directorio practicas
 
-☐ 18- Borrar el directorio tp1-temp
+   Estando dentro de la carpeta practicas/ :
+
+      tar -czvf tp1.tar.gz tp1
+
+
+    • tar: Inicia el comando tar, que se utiliza para empaquetar y comprimir
+      archivos y directorios.
+    • c: Crea un nuevo archivo.
+    • z: Comprime el archivo utilizando gzip.
+    • v: Muestra el progreso detallado en la terminal (opcional).
+    • f: Especifica el nombre del archivo que se creará.
+    • tp1.tar.gz: Indica el nombre del archivo resultante, que será
+      "tp1.tar.gz" en el directorio "practicas"
+    • tp1: Especifica el directorio que deseas empaquetar y comprimir, que en
+      este caso es "tp1"
+
+  Para descomprimirlo:
+      tar -xzvf tp1.tar.gz
+
+☑ 18- Borrar el directorio tp1-temp
+
+    Estando dentro de tp1/ :
+
+      rm -rf tp1-temp
+
