@@ -1,0 +1,84 @@
+1- Instalar un Sistema Operativo GNU/Linux (preferentemente última versión
+Ubuntu Mate), y guardar sobre un documento de office o
+texto imágenes de dos momentos de la instalción.
+
+2- De contar con un sistema operativo Windows instalado en la computadora,
+instalar la capa de compatibilidad WSL (Subsistema de Windows para Linux)
+
+3- Actualizar el Sistema Operativo instalado usando la interfaz de comandos
+utilizados para tal fin.
+
+4- Explique cuál es la finalidad de actualizar un sistema operativo.
+
+5- ¿Qué es un gestor de arranque?
+
+6- ¿Qué es un intérprete de comandos, y decir cual se instaló por defecto
+(default) en su máquina, al momento de instalar el Sistema Operativo.
+
+7- Realizar una breve descripción del directorio raíz (/) (Sistema de Archivo)
+, indicando que se aloja en cada directorio del Sistema (solamente los
+directorios del raíz).
+
+8- Usando el comando listar, mostrar tres formas diferente de ver el contenido
+de un directorio.
+
+9- Indicar como hace para ver la ayuda/documentación de cada comando del shell
+del Sistema Operativo.
+
+10- En el Sistema Operativo Windows 10/8/7/vista/XP, en que directorio se
+guardan por defecto los perfiles de usuario.
+
+  Suelen almacenarse en la carpeta "C:\Users". Cada usuario tiene su propia
+  subcarpeta dentro de esta ubicación, que lleva su nombre de usuario.
+
+11- Decir cómo se llama el intérprete de comandos más común de Windows.
+
+  El clásico se llama "Command Prompt" o "Símbolo del sistema" (cmd).
+  Últimamente se ha impulsado el uso de PowerShell, un entorno de línea de
+  coman  dos más potente y versátil. Ambos son útiles para realizar tareas de
+  administr  ación y ejecutar comandos en el sistema.
+
+12- Usando comandos del Shell del sistema operativo Windows 10/8/7/Vista/XP,
+listar el contenido del directorio raíz del sistema y describir brevemente cada
+uno de sus directorios (realizarlo en cualquier instalacion de Windows que
+posea).
+
+  Ingresando el siguiente comando:
+
+    dir C:\
+
+    En PowerShell podrías usar Get-ChildItem .
+
+
+    Users:
+        Contiene las carpetas de perfiles de usuario. Cada usuario tiene su
+    propia carpeta con su nombre de usuario, donde se almacenan sus documentos,
+    configuraciones y datos personales.
+
+    Program Files:
+        Contiene las instalaciones de programas y aplicaciones. Subdirectorios
+        dentro de esta carpeta, contienen archivos ejecutables y recursos
+        relacionados con software instlado por el usuario y el sistema.
+
+    Windows:
+        Es crítica para el funcionamiento del sistema operativo. Cosas tales
+        como el núcleo del sistema, bibliotecas y configuraciones. No se
+        recomienda modificar nada en esta carpeta sin conocimiento adecuado,
+        ya que puede afectar el funcionamiento de Windows.
+
+    ProgramData:
+        Almacena datos compartidos por programas y aplicaciones en todo el
+        sistema. Aquí es donde los programas pueden guardar información que
+        es accesible para todos los usuarios de la computadora.
+
+    Temp:
+        Almacena archivos temporales. Éstos son arhivos generados por
+        aplicaciones y el sistema operativo durante su funcionamiento. Se
+        pueden eliminar de forma segura para liberar espacio en disco, ya que
+        generalmente no son necesarios a largo plazo.
+
+    Documents and Settings:
+        Antes se usaba para almacenar perfiles de usuarios. En versiones más
+        modernas de Windows, dicha función se trasladó a la carpeta "Users".
+
+13- Investigar sobre el protocolo e implementación de SSH.

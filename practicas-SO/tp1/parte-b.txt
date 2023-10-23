@@ -1,0 +1,47 @@
+Sobre su máquina virtual o real que instalo desarrolle lo siguiente,
+
+  1- En su home ( Perfil de Usuario ) crear un directorio llamado prácticas.
+
+  2- Dentro de prácticas crear un directorio tp1
+
+  3- Dentro de tp1 crear el archivo perfil.txt
+
+  4- Usando comandos del Shell, crear un usuario nombre “admi”, para luego
+  darle accesos privilegiados.
+
+  5- En tp1 realizar una copia de los archivos /etc/passwd y /etc/group y
+guardarlos como usuarios y grupos
+
+  6- En el archivo usuarios creado en el punto anterior, identificar el uid
+( Identificador de usuario), gid (Ientificador de grupo), y shell
+(Interpetre de comandos) y guardarlos en el archivo perfil.txt creado en
+el punto 3
+
+  7- Cambiar la fecha de acceso de perfil.txt a 2018-03-06
+
+  8- Muestra las primeras 2 líneas del archivo usuarios
+
+  9- Muestre las últimas 4 líneas del archivo grupos.
+
+  10- Mostrar el contenido del archivo /etc/fstab y redireccionar su contenido
+al archivo filesystem.txt
+
+  11- Indicar cantidad de líneas, caracteres y palabras que contiene el archivo
+filesystems.txt, redireccionar las salidas al archivo cantidad
+
+  12- Redireccionar history a $HOME/practicas/tp1/cmd.txt
+
+  13- Renombrar el archivo cmd.txt como hist.txt
+
+  14- Usando el comando grep buscar en el archivo usuarios el registro
+correspondiente al usuario creado anteriormente y mandar al archivo newusuario.
+
+  15- Copiar el directorio tp1 como tp1-temp
+
+  16- Copiar el documento desarrollado en la PARTE A dentro de la carpeta
+practicas/tp1, con el nombre Practica1ParteA.txt
+
+  17- Comprimir y empaquetar el directorio tp1 y dejar dicho archivo en el
+directorio practicas
+
+  18- Borrar el directorio tp1-temp
