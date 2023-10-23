@@ -12,12 +12,86 @@ utilizados para tal fin.
 
 5- ¿Qué es un gestor de arranque?
 
+  Un "boot manager" es un programa que se encarga de controlar y coordinar
+  el proceso de inicio de un sistema operativo en una computadora. Permite
+  al usuario seleccionar qué sistema operativo se ejecutará al encender o
+  reiniciar la computadora, si hay múltiples sistemas instalados en el mismo
+  equipo.
+
+  Algunos gestores de arranque populares inlcuyen GRUB (en sistemas basados en
+  Linux), el Administrador de Arranque de Windows.
+
+  Facilita la tarea de cambiar entre sistemas sin necesidad de reconfigurar la
+  computadora cada vez que se quiera usar un sistema diferente.
+
 6- ¿Qué es un intérprete de comandos, y decir cual se instaló por defecto
 (default) en su máquina, al momento de instalar el Sistema Operativo.
+
+  En sistemas Unix/Linux, se lo conoce como shell y es un programa informático
+  que permite a los usuarios interactuar con un sistema operativo o una
+  computadora mediante el uso de comandos de texto. Los intérpretes de comandos
+  son una parte fundamental de los sistemas operativos basados en texto y
+  proporcionan una interfaz de línea comandos (CLI) que permite a los usuarios
+  ejecutar tareas y comandos directamente escribiendo texto en lugar de
+  utilizar una interfaz gráfica de usuario (GUI).
 
 7- Realizar una breve descripción del directorio raíz (/) (Sistema de Archivo)
 , indicando que se aloja en cada directorio del Sistema (solamente los
 directorios del raíz).
+
+  En un sistema de archivos de Linux, el directorio raíz ("/") es el nivel más
+  alto del sistema operativo de archivos y es la base de la estrucutura
+  jerárquica de directorios.
+
+  /bin
+      Almacena programas esenciales del sistema que son necesarios durante el
+      proceso de arranque del sistema y para el funcionamiento básico.
+      Aquí se hallan comandos como ls (listar archivos) y cp (copiar arhivos).
+
+  /boot
+      Contiene archivos necesarios para el proceso de arranque del sistema.
+      Aloja el kernel (núcleo del sistema operativo) y otros archivos de
+      configuración relacionados con el inicio.
+
+  /dev
+      Aquí se representan los dispositivos del sistema como archivos.
+      Por ejemplo, /dev/sda representa un disco duro, y /dev/ttyS2 puede ser
+      un puerto serie.
+
+  /etc
+      Aquí se hallan archivos de configuración del sistema y de aplicaciones.
+      Es un lugar importante para definir configuraciones globales del sistema
+      y aplicaciones instaladas.
+
+  /home
+      Contiene las carpetas de los usuarios.
+
+  /lib
+      Contiene bibliotecas esenciales para el correcto funcionamiento de
+      aplicaciones.
+
+  /media
+      Aquí se montan unidades extraíbles, como unidades USB y discos ópticos,
+      cuando se conectan al sistema.
+
+  /mnt
+      Se utiliza para montar sistemas de archivos temporales o particiones
+      adicionales.
+
+  /opt
+      A veces se utiliza para instalar software de terceros o aplicaciones
+      adicionales.
+
+  /root
+      Es el directorio de inicio del usuario "root", que es el superusuario
+      con control total sobre el sistema.
+
+  /srv
+      Contiene datos relacionados con servicios proporcionados por el sistema.
+
+  /tmp
+      Se utiliza para almacenar archivos temporales que no deben conservarse
+      entre reinicios.
 
 8- Usando el comando listar, mostrar tres formas diferente de ver el contenido
 de un directorio.
