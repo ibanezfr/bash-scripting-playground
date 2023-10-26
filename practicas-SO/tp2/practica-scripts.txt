@@ -1,0 +1,43 @@
+================  SCRIPTS  =================
+
+1. Crear el directorio tp2 dentro de /documentos/practicas y realizar un script
+que muestre por pantalla "Estoy aprendiendo lenguaje scripting".
+
+2. Hacer un script que realice los siguientes pasos:
+  - Limpiar la pantalla
+  - Ejecutar el comando df
+  - Buscar en la salida del comando anterior el espacio disponible en el
+  sistema de archivos raíz.
+  - Mostrar un mensaje por pantalla que diga:
+    "El espacio disponible en el sistema de archivos raíz es: XXXXXX"
+
+3. Realizar un script que evalúe 2 archivos ordinarios, e indique entre ambos
+cuál posee más cantidad de líneas.
+
+4. Idem anterior pero pasando los archivos por parámetro.
+
+5. Hacer un script que indique la cantidad de archivos y directorios que hay en
+un directorio cualquiera pasado como argumento, usando estructuras repetitivas.
+
+6. Hacer un script que realice los siguientes pasos:
+  • Descomprimir el directorio tp1 de la práctica 1 en un directorio llamado
+  nuevo
+  • Del archivo hist.txt sacar las líneas que corresponden al comando ls y
+  guardarlas en el archivo "listado".
+  • Comprimir el archivo "listado".
+
+7. Hacer un script que recorra el directorio tp1 copiado anteriormente y busque
+todos los archivos con extensión .txt y le asigna permiso de escritura a otros.
+
+8. Implementar con un script el punto 6 de la parte B de la práctica 1.
+
+9. Implementar un script usando la sentencia while, en donde se lea el archivo
+passwd línea por línea y se imprima el mismo por Terminal.
+
+10. Copiar el archivo usuarios generado en el punto 5 parte B del tp1 y
+utilizarlo en un script que permita simular dar de alta un usuario en términos
+de:
+usu01:x:uid:guid::/home/usu01:/bin/bash  (línea que debe agregar al archivo
+usuarios)
+
+El usuario usu01 debe ser pasado como argumento.
