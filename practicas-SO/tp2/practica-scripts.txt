@@ -26,6 +26,10 @@ un directorio cualquiera pasado como argumento, usando estructuras repetitivas.
   guardarlas en el archivo "listado".
   • Comprimir el archivo "listado".
 
+  Para descomprimir un archivo .tar.gz
+    tar -xzvf archivo.tar.gz
+    tar -xzvf archivo.tar.gz -C carpeta-destino/
+
 7. Hacer un script que recorra el directorio tp1 copiado anteriormente y busque
 todos los archivos con extensión .txt y le asigna permiso de escritura a otros.
 
