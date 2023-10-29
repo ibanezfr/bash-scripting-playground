@@ -1,5 +1,16 @@
+perfil.txt
 *.tar.gz
-
+nuevo/
+listado
+hist.txt
+cmd.txt
+usuarios
+grupos
+fylesystem.txt
+cantidad
+newusuario
+tp1-temp/
+Practica1ParteA.txt
 
 # Ignore system files and directories
 .DS_Store

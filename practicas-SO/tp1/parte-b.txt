@@ -148,18 +148,18 @@ filesystems.txt, redireccionar las salidas al archivo cantidad
 ☑ 14- Usando el comando grep buscar en el archivo usuarios el registro
 correspondiente al usuario creado anteriormente y mandar al archivo newusuario.
 
-      cat usuarios | grep admi < newusuario
+      cat usuarios | grep admi > newusuario
 
 ☑ 15- Copiar el directorio tp1 como tp1-temp
 
-    cp tp1 tp1-temp
+    cp -r tp1 tp1-temp
 
 ☑ 16- Copiar el documento desarrollado en la PARTE A dentro de la carpeta
 practicas/tp1, con el nombre Practica1ParteA.txt
 
     Estando en la carpeta raiz:
 
-      cp practicas/tp1/parte-a.txt practicas/tp1/Practica1PartaA.txt
+      cp practicas/tp1/parte-a.txt practicas/tp1/Practica1ParteA.txt
 
 ☑ 17- Comprimir y empaquetar el directorio tp1 y dejar dicho archivo en el
 directorio practicas
