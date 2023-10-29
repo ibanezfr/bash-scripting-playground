@@ -12,6 +12,7 @@ newusuario
 tp1-temp/
 Practica1ParteA.txt
 
+
 # Ignore system files and directories
 .DS_Store
 Thumbs.db
