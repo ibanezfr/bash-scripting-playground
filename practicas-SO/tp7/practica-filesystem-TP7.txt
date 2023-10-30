@@ -1,0 +1,70 @@
+=========================   Trabajo Práctico N° 7   ============================
+                              File System
+
+1) Dado el siguiente informe:
+
+      Device    Boot    Start   End Block  Id   System
+      /dev/hda1   1     1305    10482381    7   HPFS/NTFS
+      /dev/hda2   1306  2429    9028530    83   Linux
+      /dev/hda3   2430  2494    522112     83   Linux Swap
+
+  Indicar:
+
+   a- Cantidad de discos rígidos
+   b- Indicar cantidad de particiones de cada disco
+   c- Describir los tipos de particiones que se muestran
+
+2) Dado el siguiente informe:
+
+      Disposit.   Inicio  Comienzo   Fin     Bloques  Id  Sistema
+      /dev/sda1     1         9728  78140128      7   HPFS/NTFS
+      /dev/sdb1     1         9605  77152131     83   Linux
+      /dev/sdb2     9606      9729  996030       82   Linux swap / Solaris
+
+   Indicar:
+
+    a- Cantidad de discos rígidos
+    b- Indicar cantidad de particiones de cada disco
+    c- Describir los tipos de particiones que se muestran
+
+3) Dado un servidor con 4 discos rígidos, controladora de discos inteligente y
+   además con la modalidad Hot Swap Describir como funciona un raid de
+   disco 1+0 y 5, y determinar que perdida en capacidad que tienen ambos
+   arreglos.
+
+4) Como se sabe en una empresa aérea la información es de vital importancia, por
+   lo tanto dichos datos están alojados en lo que se denominan storage de disco.
+   Decir que tipo de RAID de disco aconsejaría, además explicar cómo funciona el
+   tipo de RAID elegido.
+
+5) Explicar que método de RAID de disco duplica la velocidad de lectura de
+   datos, y piense para que tipo de aplicación puede ser más útil.
+
+6) Hacer un script que reciba como parámetro un directorio cualquiera, y calcule
+   el tamaño de cada uno de sus archivos (ordinarios o directorios), además
+   contabilizar los archivos ordinarios y directorios que existen.
+
+7) Hacer un script que informe los tipos de particiones que tiene el disco, y
+   los tamaños en megabyte de las mismas. ( Comando fdisk )
+
+8) Realizar un script que busque en un directorio cualquiera pasado como
+   parámetro, los archivos *.mp3 y los borre, ademas que busque los archivos que
+   tienen permisos 744 y los mueva a un directorio llamado “exe”
+
+9) Dado un directorio cualquiera pasado por parámetro, crear un script que me
+   devuelva el nombre del archivo más grande y su correspondiente tamaño.
+
+10) Hacer un script que me muestre la partición principal del disco,
+    especificando en Kbyte:
+
+      - Cantidad de bloques
+      - Bloques usados
+      - Bloques disponibles
+
+11) Hacer un script que cree el directorio “edirectory” y desde este crear
+    enlaces simbólicos a todos los directorios que se encuentran dentro de la
+    carpeta práctica (Ej. TP1, TP2, etc).
+
+    Además crear la carpeta “efiler” y desde aquí crear 2 enlaces simbólicos a
+    los ejercicios 1 y 2 de la práctica TP2.
+

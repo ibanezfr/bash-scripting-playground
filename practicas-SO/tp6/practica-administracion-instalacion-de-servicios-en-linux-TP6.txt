@@ -1,0 +1,57 @@
+========================   Trabajo Práctico N° 6   ============================
+               Administración e intalación de servicios en Linux
+
+1) Usando el gestor de paquetes de Linux, instalar un servidor Apache2 para
+   usarlo como web server.
+
+2) Usando el comando netstat, genere un script que identifique y devuelva por
+   pantalla los puertos de comunicación que usa el servicio http.
+
+3) Investigar el comando CRON y el archivo asociado al mismo. Instalarlo en el
+   sistema si es que no esta.
+
+4) Utilizando el CRON escribir un script que genere cada dos minutos un archivo
+   de nombre “archi||Hora-actual”. Luego de probado dejar el archivo crontab
+   vacío.
+
+5) Hacer un script que genere un backup los días hábiles de la semana a las
+   0 horas, del directorio prácticas, dejando en archivos separados las
+   carpetas TP1, TP2 y TP3, además el nombre del archivo de backup debe tener
+   concatenada la fecha de realización.
+
+6) Hacer un script que informe cantidad de usuarios conectados al servidor, el
+   tiempo de encendido del equipo y el promedio de carga del mismo en los
+   últimos 1, 5 y 15 minutos.( uptime )
+
+7) Hacer un script que informe la dirección física, la dirección IP y la
+   máscara de subred de la placa de red.( ifconfig)
+
+8) Hacer un scripts que permita correr el comando dmesg ( mensaje de
+   diagnostico del nucleo de linux ) y poder ingresar por parámetro cualquiera
+   de los siguientes filtros a dicho comando, como para tener información más
+   detallada del diagnóstico buscado. emerg – el sistema no se puede usar
+
+     alert – se deben tomar medidas de inmediato
+     crit – condiciones críticas
+     err – condiciones de error
+     warn – condiciones de advertencia
+     notice – condición normal pero significativa
+     info – informativo
+     debug – mensajes a nivel de depuración
+
+9) Hacer un script que guarde en el archivo conectados todos los usuarios
+   conectados al sistema y si al script le paso como parámetro un usuario
+   cualquiera me informe solamente este usuario y la
+   hora de conexión al servidor.
+
+10) Hacer un script que informe si un usuario cualquiera se conectó al servidor
+    en el último mes, ejercicio para usar el comando “last”.
+
+11) Escribir un script que genere un archivo con información en forma
+    separada de:
+
+        a. Arquitectura del procesador
+        b. Nombre de la maquina
+        c. El sistema operativo instalado
+        d. La versión del kernel
+

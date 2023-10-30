@@ -1,0 +1,173 @@
+========================   Trabajo Práctico N° 5   ============================
+                Semáforos - Hilos - Administraci+on de Memoria
+
+1) Hacer un programa en lenguaje C que permita manejar a través de 2 hilos
+   distintos la impresión de dos frases:
+
+      a) “Primero aprendo lenguaje C” (hilo 1)
+      b) “Segundo tratare de aprender Semáforos” (Hilo 2)
+
+  Como en la realidad no sabemos que hilo se va a ejecutar primero, debemos
+  sincronizar a través de un semáforo que primero se ejecute el punto a y
+  luego el b
+
+  Nota: Identificar cual es la sección crítica.
+
+2) Hacer un programa en lenguaje C que permita manejar a través de 2 hilos
+   distintos una variable llamada “contador“ inicializada en 0 compartida por
+   ambos hilos, en uno de esos hilo de ejecución esa variable se incrementa,
+   y por el otro hilo se decrementa, si hacemos por ejemplo 10000 iteraciones
+   en los dos hilos sobre esa misma variable contador, y ejecutamos nuestro
+   programa varias veces podremos observar que rara vez esa variable queda
+   en 0 como quisiéramos que ocurra. Para que esto suceda debemos sincronizar
+   a través de un semáforo la ejecución de estos hilos para que dicha variable
+   siempre quede en 0.
+
+   Nota: Identificar cual es la sección crítica.
+
+3) Escriba una rutina en lenguaje C, donde se crean dos hilos, estos serán
+   lanzados en paralelo.
+   Implemente un semáforo para ambos procesos, donde se garantice la exclusión
+   mutua entre ambos procesos.
+
+   Nota: Identificar cual es la sección crítica.
+
+4) Hacer un script que informe:
+
+    a) Total de memoria del sistema
+    b) Total de memoria usada
+    c) Total de memoria libre
+    d) Dejar el informe en un archivo llamado “Informe de RAM”
+
+    Usar el comando free para resolverlo
+
+5) Hacer un script que informe:
+
+    a) Los procesos esperando por CPU
+    b) El número de procesos en estado dormido
+    c) Si dichos proceso están usando memoria swap
+    d) La cantidad de memoria intercambiada desde el disco
+    e) La cantidad de memoria intercambiada hacia el disco.
+
+6) Hacer un script que permita indicarle por parámetro si quiero habilitar o
+   deshabilitar la memoria swap
+
+7) Hacer un script que permita tomar la decisión de cambiar los niveles de
+   intercambio entre la memoria swap y la RAM, en este caso el script me debe
+   solicitar al ejecutarlo:
+
+    - 0% de nivel de intercambio.
+    - 50% de nivel de intercambio.
+    - 100% de nivel de intercambio.
+
+   Tener en cuenta que si el sistema operativo se reinicia debe volver a los
+   valores por defecto.
+
+8) Hacer un script que permita chequear cada 5 segundos el estado de la
+  memoria libre, en caso que la misma llegue a un determinado valor ingresado
+  como parámetro al ejecutar el script, dispare una alerta en el servidor
+  (En este caso un mensaje por pantalla).
+
+9) Escribir un script que deje en un archivo de nombre “mem-actual” el estado
+   de la memoria actual, y en un archivo de nombre “mem-limpia” el estado luego
+   de ejecutar el comando de liberación de memoria. El script me debe
+   solicitar al ejecutarlo que tipo de nivel de liberación quiero hacer al
+   ejecutar el comando que corresponde a tal fin.
+
+   Acontinuación se especifican los valores a pasarle al comando de
+   liberación de memoria:
+
+   0: No liberara absolutamente nada de nuestra memoria cache.
+   1: Forzamos a nuestro kernel a liberar la pagecache.
+   2: Forzando a nuestro kernel a liberar los inodos y dentries.
+   3: Forzando a nuestro kernel a liberar la pagecache, los inodos y las
+      dentries.
+
+10) Programe un scripts que identifique si en servidores Linux se encuentra
+    instalado el comando “dmidecode”, en caso de estar instalado me determine
+    la cantidad máxima de memoria física que puedo instalar en ese servidor, y
+    el tamaño máximo del módulo de memoria que puedo que acepta dicho servidor.
+    En caso de no estar instalado correr el comando necesario para hacerlo y
+    determinar lo solicitado anteriormente.
+
+11) Dada la siguiente tabla de páginas de un proceso, donde el tamaño de las
+    mismas es de 1024byte
+
+    Nº Página   Dirección de Inicio    Bit de Validez
+      P0         4096                     1
+      P1         8192                     1
+      P2         2048                     0
+      P3         6144                     1
+      P4         1.024                    0
+
+    Hacer un script que calcule la dirección física de las siguientes
+    direcciones lógicas:
+
+     a) página 0 desplazamiento 80
+     b) página 3 desplazamiento 150
+     c) página 1 desplazamiento 600
+     d) página 4 desplazamiento 327
+     e) pagina 2 desplazamiento 35
+
+12) Dada la siguiente tabla de páginas de un proceso, donde el tamaño de las
+    mismas es de 4096byte
+
+    Nº Página     Dirección de Inicio     Bit de Validez
+      P0                4096                     1
+      P1                16384                    1
+      P2                28672                    0
+      P3                20480                    1
+      P4                12288                    0
+      P5                8192                     1
+      P6                32768                    1
+
+    Hacer un script que calcule la dirección física de las siguientes
+    direcciones lógicas:
+
+      a) página 0 desplazamiento 2048
+      b) página 3 desplazamiento 3000
+      c) página 1 desplazamiento 1800
+      d) página 4 desplazamiento 4097
+
+13) En un sistema actualmente se encuentra la siguiente Tabla de Pagina
+
+      Número de P´gina      Dirección
+            1                  1280
+            2                  768
+            3                  1792
+            4                  1024
+            5                  256
+
+    [Considere que el tamaño de página es de 256 bytes y que una dirección de
+    memoria referencia a 1 byte]
+
+    Hacer un script que demuestre si las siguientes direcciones físicas son
+    correctas, en caso afirmativo indique la dirección lógica a la
+    que corresponden:
+
+      a) 380
+      b) 1400
+      c) 915
+      d) 1540
+
+    Dejar en el archivo de nombre “salida” el resultado de dichas
+    operaciones y un mensaje del motivo, en caso que no se pueda resolver
+    algunas de las direcciones dadas.
+
+14) Considere la siguiente Tabla de Segmentos.
+
+      Segmento    Base      Longitud
+         0        219         600
+         1        2300        14
+         2        90          100
+         3        1327        580
+         4        1952        96
+
+    Hacer un script que calcule las direcciones físicas de las siguientes
+    direcciones lógicas
+
+    a) Seg 0, Desplazamiento 430
+    b) Seg 1, Desplazamiento 10
+    c) Seg 1, Desplazamiento 11
+    d) Seg 2, Desplazamiento 500
+
