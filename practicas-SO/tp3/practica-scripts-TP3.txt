@@ -12,7 +12,7 @@
    que tengan permiso igual a 644. De dichos archivos guardar solo los nombres
    en un archivo de nombre “perm644”.
 
-4- Usando el comando find, generar un scrip que al pasarle un directorio
+4- Usando el comando find, generar un script que al pasarle un directorio
   cualquiera pasado como parámetro:
 
     a) Guarde en el archivo name los nombres de archivos que comienzan con la
@@ -21,14 +21,14 @@
     b) Guarde en el archivo extend los nombres de archivos que tienen
        extensión .txt
 
-    c) Guarde en el archivo perm los nombre de archivos que tienen permisos
+    c) Guarde en el archivo perm los nombres de archivos que tienen permisos
        iguales a 644
 
     d) Guarde en el archivo tam los nombres de archivos que tienen tamaño
        mayor a 1K
 
 5- Usando una estructura repetitiva recorrer un directorio cualquiera pasado
-   por parámetro y determinar que archivos fueron modificados (Comnado stat)
+   por parámetro y determinar que archivos fueron modificados (Comando stat)
    en un mes determinado.Dicho mes también pasarlo por parámetro.
 
 6- Hacer un informe de un directorio cualquiera pasado por parámetro que
@@ -99,7 +99,11 @@
     llamada “no-execu”, ademas generar un listado con los nombres de los
     archivos copiados.
 
-===================   Anexo – Practica 3  =====================================
+
+
+
+=========================   Anexo – Practica 3  ================================
+
 
 1- Hacer un script que reciba como parámetro un archivo y un string y me
    informe si dicho string esta en el archivo. A su vez debe chequear la
