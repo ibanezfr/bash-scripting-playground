@@ -19,6 +19,7 @@ var-set
 perm644
 conteo.txt
 scripts-sh/
+primeras_lineas.txt
 
 # Ignore system files and directories
 .DS_Store
