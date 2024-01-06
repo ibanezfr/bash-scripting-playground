@@ -23,7 +23,7 @@
    caso de que el usuario pasado como argumento sea root, mostrar un mensaje
    de error.
 
-5. Crear un scripts simple que genere un bucle inﬁnito, luego hacer lo
+5. Crear un script simple que genere un bucle inﬁnito, luego hacer lo
    siguiente:
 
     a) Ejecutar el mismo en segundo plano
