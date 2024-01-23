@@ -50,7 +50,7 @@
     Padre”
 
 9. Crear una rutina en lenguaje C donde se crea un proceso hijo y muestre por
-   consola los IDs del:
+   consola los IDs del: (REVISAR)
 
     - Hijo
     - Padre
@@ -80,7 +80,7 @@
 
     Nota: para que las salidas no sean engorrosas no ejecutar más de 4 fork()
 
-13. Crear una rutina en lenguaje C, donde:
+13. Crear una rutina en lenguaje C, donde: (REVISAR)
 
       a) El padre solamente pueda crear procesos,
       b) Que solamente un hijo puede crear procesos
