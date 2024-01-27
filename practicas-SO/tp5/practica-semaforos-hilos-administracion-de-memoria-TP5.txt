@@ -83,7 +83,7 @@
    3: Forzando a nuestro kernel a liberar la pagecache, los inodos y las
       dentries.
 
-10) Programe un scripts que identifique si en servidores Linux se encuentra
+10) Programe un script que identifique si en servidores Linux se encuentra
     instalado el comando “dmidecode”, en caso de estar instalado me determine
     la cantidad máxima de memoria física que puedo instalar en ese servidor, y
     el tamaño máximo del módulo de memoria que puedo que acepta dicho servidor.
