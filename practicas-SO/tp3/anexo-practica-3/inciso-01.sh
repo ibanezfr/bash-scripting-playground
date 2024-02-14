@@ -1,5 +1,7 @@
+#!/bin/bash
+
 # Autor: Franco E. Ibañez
-# Fecha: 12 de diciembre de 2023
+# Fecha: 2023-12-12
 # Descripción: Este script primero verifica si se proporcionaron los dos
 #              parámetros esperados. Luego, comprueba si el archivo dado existe.
 #              Posteriormente, utiliza el comando 'grep' para buscar la cadena
@@ -7,7 +9,6 @@
 #              un mensaje indicando su presencia; de lo contrario, muestra un
 #              mensaje indicando que no se econtró la cadena en el archivo.
 
-#!/bin/bash
 
 if [ $# -ne 2 ]; then
   echo "Por favor, proporciona un archivo y una cadena de texto como parámetros"
